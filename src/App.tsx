@@ -1,26 +1,61 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { GlobalStyle } from './core/styles/global-styles';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Cta from './core/components/Cta'
+import CtaContainer from './core/components/Cta/CtaContainer'
+
+export default function App() {
+    return (
+        <main>
+            Shrent App
+            <CtaContainer margin="0 15px 16px">
+                <Cta
+                    ctaStyle="primary"
+                    ctaType="button"
+                    iconAlign="left"
+                    size="small"
+                    onClick={() => {}}
+                >
+                    Primary
+                </Cta>
+                <Cta
+                    ctaStyle="secondary"
+                    ctaType="button"
+                    iconAlign="left"
+                    size="small"
+                    onClick={() => {}}
+                >
+                    Secondary
+                </Cta>
+                <Cta
+                    ctaStyle="outline"
+                    ctaType="button"
+                    iconAlign="left"
+                    size="small"
+                    onClick={() => {}}
+                >
+                    outline
+                </Cta>
+                <Cta
+                    ctaStyle="plain"
+                    ctaType="button"
+                    iconAlign="left"
+                    size="small"
+                    onClick={() => {}}
+                >
+                    Plain
+                </Cta>
+                <Cta
+                    ctaType="button"
+                    iconAlign="left"
+                    size="small"
+                    isDisabled
+                    onClick={() => {}}
+                >
+                    Disabled
+                </Cta>
+            </CtaContainer>
+            <GlobalStyle />
+        </main>
+    )
 }
-
-export default App;
