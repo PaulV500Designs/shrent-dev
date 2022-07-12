@@ -3,8 +3,8 @@ import styled, {
   FlattenSimpleInterpolation as CSS,
 } from 'styled-components';
 
-import * as mx from '../../styles/mixins';
-import { StyleConstants } from '../../styles/StyleConstants';
+import * as mx from 'core/styles/mixins';
+import { StyleConstants } from 'core/styles/StyleConstants';
 
 export interface CtaStateType {
   color?: string | null;
@@ -26,8 +26,8 @@ export interface CtaType {
 
 export const CTA_CLASS = 'cta';
 
-export const CTA_PADDING = '8px 20px';
-const CTA_BORDER_WIDTH = 1;
+export const CTA_PADDING = '12px 24px';
+const CTA_BORDER_WIDTH = 2;
 
 const CTA_SIZE = {
   xsmall: '12px',
@@ -111,8 +111,6 @@ const getCtaStyles = (cta: CtaType, isInverted: boolean): CSS => {
 };
 
 // CTAs are driven by the `.cta` class name and modifiers
-// due to CMS requirements wherein authors need to be able
-// to get visual parity in Sitecore RTE when making hyperlinks
 // "look like CTAs" by adding a className to them
 //
 // ! Don't use the .cta class names in your components!
@@ -125,17 +123,19 @@ export const classNameCtas = css`
     .${CTA_CLASS}-success,
     .${CTA_CLASS}-warning,
     .${CTA_CLASS}-disabled,
+    .${CTA_CLASS}-outline,
     .${CTA_CLASS}-plain,
     .${CTA_CLASS}-mute {
     ${mx.buttonReset};
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.8;
     display: inline-flex;
     align-items: center;
     outline: none;
     padding: ${CTA_PADDING};
     text-align: center;
-    border-width: 1px;
+    border-width: ${CTA_BORDER_WIDTH};
     border-style: solid;
     border-radius: ${StyleConstants.radius.small};
     margin: 0;
@@ -295,16 +295,16 @@ export const Content = styled.span<{
       }
     `};
 
-  /* Override the style set from the scTextWrapper for align icon inside the anchor component */
   &&& > a {
     display: inherit;
     flex-direction: inherit;
   }
 `;
 
-export const CtaContainer = styled.section<{
+export const CtaContainer = styled.div<{
   direction?: string;
   margin?: string;
+  padding?: string;
 }>`
   display: flex;
   align-items: center;
@@ -322,6 +322,20 @@ export const CtaContainer = styled.section<{
     } */
   }
 
+  &.--column {
+
+    & > div {
+      width: 100%;
+      height: auto;
+      margin: 0 0 10px;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   ${({ direction }) =>
     direction &&
     css`
@@ -332,5 +346,11 @@ export const CtaContainer = styled.section<{
     margin &&
     css`
       margin: ${margin};
+    `}
+
+  ${({ padding }) =>
+    padding &&
+    css`
+      padding: ${padding};
     `}
 `;

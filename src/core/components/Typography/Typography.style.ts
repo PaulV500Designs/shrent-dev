@@ -61,9 +61,9 @@ export const headingOne: any = css`
 `;
 
 export const headingTwo: any = css`
-  font-size: 32px;
+  font-size: 50px;
   font-weight: 600;
-  line-height: 48px;
+  line-height: 68px;
 `;
 
 export const headingThree: any = css`
@@ -73,9 +73,9 @@ export const headingThree: any = css`
 `;
 
 export const headingFour: any = css`
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
-  line-height: 36px;
+  line-height: 32px;
 `;
 
 export const headingFive: any = css`
@@ -85,14 +85,14 @@ export const headingFive: any = css`
 `;
 
 export const headingSix: any = css`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 24px;
 `;
 
 export const subHeading: any = css`
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
 `;
 
@@ -275,11 +275,6 @@ export const classNameTypography: any = css`
 export const globalTypography: any = css`
   /* ------------------------------------
 	Default site-wide fonts and semantic typography */
-
-  /* html {
-    color: #000;
-    ${body}
-  } */
 
   h1 {
     ${displayOne}

@@ -1,7 +1,7 @@
 /**
  * Style Constants
  * Declare here the colors, sizes, etc that is defined in Figma
- * @ref https://www.figma.com/file/qSHyqAp23LCI1R4Lb0vEk0/SquidPay-Admin-0.1?node-id=1%3A3
+ * @ref https://www.figma.com/file/rtQcBIHhpqYeLp7JbaGgod/Shrent-Mobile%2FWeb-App?node-id=901%3A17229
  */
 
 // ------------------------------------
@@ -34,14 +34,14 @@ const CTA_PRIMARY = {
 
 export const StyleConstants = {
   color: {
-    primaryyellow: '#E0AC3B',
-    gray: '#ECEAE0',
-    black: '#121212',
-    white: '#FFFFFF',
+    primaryBlue: '#3704FF',
+    gray: '#6E7387',
+    black: '#000',
+    white: '#FFF',
     paleyellow1: '#D7C481',
     paleyellow2: '#FAEDAB',
     metallicdarkgray: '#D1CFCB',
-    gray1: '#262E35',
+    gray1: '#1C3454',
     gray2: '#38434D',
     gray3: '#526372',
     gray4: '#A9B1B8',
@@ -99,7 +99,7 @@ export const StyleConstants = {
   },
   body: {
     default: '#FFFFFF',
-    background: '#F7F8FA',
+    background: '#DAB9E6',
     text: '#526372',
   },
   ctas: {
@@ -128,7 +128,7 @@ export const StyleConstants = {
 
       base: {
         color: '#E0AC3B',
-        text: '#38434D',
+        text: '#fff',
         border: '#E0AC3B',
       },
 
@@ -154,11 +154,12 @@ export const StyleConstants = {
       },
 
       hover: {
-        text: '#D7C481',
+        text: '#022343',
+        background: '#022343',
       },
 
       active: {
-        text: '#E0AC3B',
+        text: '#022343',
       },
 
       disabled: {

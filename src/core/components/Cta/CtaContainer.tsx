@@ -3,6 +3,7 @@
  * make it more flexible for orientation
  */
 import React from 'react';
+import cx from 'classnames';
 
 import * as S from './Cta.style';
 
@@ -13,14 +14,21 @@ interface CtaContainerTypes extends React.HTMLAttributes<HTMLElement> {
   direction?: string;
   /** Margin of the CTA container default none/0 */
   margin?: string;
+  /** Padding of the CTA container default none/0 */
+  padding?: string;
 }
 
-const CtaContainer = ({ children, direction, margin }: CtaContainerTypes) => {
+const CtaContainer = ({ children, direction, margin, padding }: CtaContainerTypes) => {
+  const className = cx('cta-container', {
+    '--column': direction === 'column',
+  });
+
   return (
     <S.CtaContainer
       direction={direction}
       margin={margin}
-      className="cta-container"
+      padding={padding}
+      className={className}
     >
       {children}
     </S.CtaContainer>

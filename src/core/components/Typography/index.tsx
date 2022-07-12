@@ -25,8 +25,8 @@ type TypographyColorType =
   | 'success';
 
 const colors = {
-  primary: '#E0AC3B',
-  default: '#343a40',
+  primary: '#3704FF',
+  default: '#000',
   subdued: '#A9B1B8',
   active: '',
   error: '',
@@ -117,7 +117,7 @@ const DynamicTypographyComponent = ({
   );
 
   const inlineStyles = {
-    color: !!color ? colors[color] : colors.default,
+    // color: !!color ? colors[color] : colors.default,
     display: inline ? 'inline-block' : 'block',
     textDecoration,
     fontStyle,

@@ -42,15 +42,16 @@ type onClickType =
   | React.MouseEvent<HTMLSpanElement>;
 
 export interface CtaProps {
+  className?: string;
   ctaStyle?:
-    | 'primary'
-    | 'secondary'
-    | 'plain'
-    | 'outline'
-    | 'mute'
-    | 'warning'
-    | 'success'
-    | 'disabled';
+  | 'primary'
+  | 'secondary'
+  | 'plain'
+  | 'outline'
+  | 'mute'
+  | 'warning'
+  | 'success'
+  | 'disabled';
   ctaType?: 'anchor' | 'button' | 'cosmetic' | 'unstyled';
   size?: 'xsmall' | 'small' | 'medium' | 'large';
 
@@ -93,6 +94,7 @@ export interface CtaProps {
 // ------------------------------------------
 
 const Cta = ({
+  className = '',
   ctaStyle = 'primary',
   ctaType = 'anchor',
   size = 'medium',
@@ -139,24 +141,24 @@ const Cta = ({
     'aria-disabled': !isButton ? disabledState : undefined,
     className: !isUnstyled
       ? cx(S.CTA_CLASS, {
-          // Styles --------------------------------
-          'cta-primary': ctaStyle === 'primary',
-          'cta-secondary': ctaStyle === 'secondary',
-          'cta-plain': ctaStyle === 'plain',
-          'cta-outline': ctaStyle === 'outline',
-          'cta-mute': ctaStyle === 'mute',
-          'cta-warning': ctaStyle === 'warning',
-          'cta-success': ctaStyle === 'success',
+        // Styles --------------------------------
+        'cta-primary': ctaStyle === 'primary',
+        'cta-secondary': ctaStyle === 'secondary',
+        'cta-plain': ctaStyle === 'plain',
+        'cta-outline': ctaStyle === 'outline',
+        'cta-mute': ctaStyle === 'mute',
+        'cta-warning': ctaStyle === 'warning',
+        'cta-success': ctaStyle === 'success',
 
-          // States & flags ------------------------
-          '-alert': isAlert,
-          '-disabled': isDisabled ?? isLoading,
-          '-hovered': isHovered,
-          '-inverted': isInverted,
-          '-linkAlike': isLinkAlike,
-          '-withoutPadding': isWithoutPadding,
-          '--full-width': fullWidth,
-        })
+        // States & flags ------------------------
+        '-alert': isAlert,
+        '-disabled': isDisabled ?? isLoading,
+        '-hovered': isHovered,
+        '-inverted': isInverted,
+        '-linkAlike': isLinkAlike,
+        '-withoutPadding': isWithoutPadding,
+        '--full-width': fullWidth,
+      })
       : undefined,
     onClick: (event: onClickType) => {
       // Suppress `href` navigation for disabled hyperlinks
@@ -177,19 +179,13 @@ const Cta = ({
     // <Icon className="icon" src={icon} size={size} />
   ) : null;
   /**
-   * Modified by Habs as per instruction from Paul
-   * 2021/08/18 15:48
-   * Changes: remove the CtaWrapperClassName
-   *          change the <S.Cta> into <S.Cta className="cta__wrapper" style={{ width: fullWidth ? '100%' : 'auto' }}>
+   *  change the <S.Cta> into <S.Cta className="cta__wrapper" style={{ width: fullWidth ? '100%' : 'auto' }}>
+   *  const CtaWrapperClassName = cx('cta__wrapper', { '--full-width': fullWidth });
    */
-  // const CtaWrapperClassName = cx('cta__wrapper', { '--full-width': fullWidth });
+  const CtaWrapperClassName = cx('cta__wrapper', className);
+
   return (
-    <S.Cta
-      className="cta__wrapper"
-      style={{
-        width: fullWidth ? '100%' : 'auto',
-      }}
-    >
+    <S.Cta className={CtaWrapperClassName}>
       {/* Override some select CTA styles to facilitate utilising <Link/>
 			component for the Experience Ediotr whilst retaining core CTA style parity. */}
       {/* Cta content (text or encapsulated link) */}

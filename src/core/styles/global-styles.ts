@@ -11,15 +11,16 @@ import { StyleConstants } from './StyleConstants';
 import './fontFace.css';
 
 export const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   html,
   body {
     height: 100%;
     width: 100%;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
   }
 
   html {
