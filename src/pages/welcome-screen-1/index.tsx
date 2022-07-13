@@ -13,6 +13,9 @@ import ShrentLogo from 'assets/shrent-logo-web.png';
 import * as S from './page.style';
 
 export default function WelcomeScreen() {
+    const ssoCTA = response => {
+        console.log('response', response);
+    }
     return (
         <S.WelcomeScreen id="welcomeScreen">
             <S.LogoContainer className="logo-container">
@@ -34,7 +37,27 @@ export default function WelcomeScreen() {
                     >
                         Continue with Google
                     </Cta>
+                    <GoogleLogin
+                        clientId="38744847901-nqp81mfdsoroqppam0bceqs9ikmgfhsi.apps.googleusercontent.com"
+                        buttonText="Login"
+                        onSuccess={ssoCTA}
+                        onFailure={ssoCTA}
+                        cookiePolicy={'single_host_origin'}
+                        disabled={false}
+                    // render={renderProps => (
+                    //         <Cta
+                    //             className="cta--google"
+                    //             ctaStyle="outline"
+                    //             ctaType="button"
+                    //             size="large"
+                    //             onClick={renderProps.onClick}
+                    //         >
+                    //             Continue with Google
+                    //         </Cta>
+                    //     )}
+                    />
                 </CtaContainer>
+                
                 {/* <GoogleLogin ></GoogleLogin> */}
                 <S.OR>
                     <Caption margin="0">OR</Caption>
