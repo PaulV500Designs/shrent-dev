@@ -23,18 +23,6 @@ export function validatePhone(phone: string = '') {
 }
 
 /**
- * Convert File Size
- */
-export function fileSize(size: number = 0) {
-  const fSize = typeof size === 'number' ? size : parseInt(size);
-  if (fSize === 0) return '0 Bytes';
-  const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-  const i = Math.floor(Math.log(fSize) / Math.log(k));
-  return parseFloat((fSize / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-}
-
-/**
  * Sort Array
  * Use only this helper if you are sorting through an array of objects
  * @param {array}   arr     the array to sort (length should be greater than 1)

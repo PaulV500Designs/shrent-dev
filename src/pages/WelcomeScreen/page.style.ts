@@ -30,7 +30,7 @@ export const LogoContainer = styled.div``;
 
 export const OR = styled.div`
   position: relative;
-  margin: 25px 0;
+  margin: 20px 0;
 
   .typography--caption {
     color: rgba(28, 52, 84, 0.26);
@@ -69,5 +69,35 @@ export const Form = styled.form`
   .site-logo {
     display: block;
     margin: 0 auto ${StyleConstants.spacing[32]};
+  }
+`;
+
+export const RememberMe = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .cta {
+
+    span {
+      color: ${StyleConstants.color.black};
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+  }
+`;
+
+export const HaveAccount = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .cta {
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.9;
+    }
   }
 `;

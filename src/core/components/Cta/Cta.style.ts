@@ -129,7 +129,7 @@ export const classNameCtas = css`
     ${mx.buttonReset};
     font-size: 22px;
     font-weight: 600;
-    line-height: 1.8;
+    line-height: 1.6;
     display: inline-flex;
     align-items: center;
     outline: none;

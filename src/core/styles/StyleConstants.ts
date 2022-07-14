@@ -109,15 +109,15 @@ export const StyleConstants = {
 
       inverted: {
         base: {
-          color: '#fff',
-          text: '#E0AC3B',
+          color: '#3704FF',
+          text: '#3704FF',
           border: null,
         },
         hover: {
-          color: '#ECEAE0',
+          color: '#3704FF',
         },
         active: {
-          color: '#A9B1B8',
+          color: '#3704FF',
         },
         disabled: CTA_DISABLED,
       },
@@ -175,16 +175,16 @@ export const StyleConstants = {
 
       base: {
         color: null,
-        text: '#E0AC3B',
+        text: '#3704FF',
         border: null,
       },
 
       hover: {
-        text: '#D7C481',
+        text: '#3704FF',
       },
 
       active: {
-        text: '#E0AC3B',
+        text: '#3704FF',
       },
 
       disabled: {
