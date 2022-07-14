@@ -16,6 +16,14 @@ export const PageContainer = styled.section`
   .card {
     height: auto;
     width: 480px;
+
+    & > div {
+      text-align: center;
+    }
+  }
+
+  .typography--paragraphBold {
+    text-align: left;
   }
 `;
 

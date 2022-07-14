@@ -5,10 +5,10 @@ import { HeadingFour, SubHeading } from 'core/components/Typography';
 import * as S from './ContentHeader.style';
 
 export default function ContentHeader({ title, subTitle }:
-    { title: string, subTitle: string }) {
+    { title: string, subTitle?: string }) {
     return (
         <S.ContentHeader>
-            <HeadingFour margin="0 0 10px">
+            <HeadingFour tag="h4" margin="0 0 10px">
                 {title}
             </HeadingFour>
             {subTitle && (

@@ -75,7 +75,7 @@ export const headingThree: any = css`
 export const headingFour: any = css`
   font-size: 22px;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 22px;
 `;
 
 export const headingFive: any = css`

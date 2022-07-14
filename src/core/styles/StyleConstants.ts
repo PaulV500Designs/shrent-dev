@@ -22,11 +22,11 @@ const CTA_PRIMARY = {
   },
 
   hover: {
-    color: '#262E35',
+    color: '#3704FF',
   },
 
   active: {
-    color: '#262E35',
+    color: '#3704FF',
   },
 
   disabled: CTA_DISABLED,

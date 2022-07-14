@@ -31,8 +31,8 @@ const medium = css`
 `;
 
 const large = css`
-  height: 96px;
-  width: 96px;
+  height: 60px;
+  width: 60px;
 `;
 
 const Icon = styled.img<IconProps>`

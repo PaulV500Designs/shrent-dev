@@ -108,7 +108,7 @@ const DynamicTypographyComponent = ({
   ...props
 }: IProps) => {
   // Default tag wrappers should be divs
-  const Tag: any = 'div' || tagProp || asProp;
+  const Tag: any = tagProp || asProp || 'div';
   // 'div' by default but always overriden by `tag` prop, below
 
   className = cx(
@@ -324,8 +324,8 @@ export const BodySmall = (props: ITypoProps) => (
 
 export const Caption = (props: ITypoProps) => (
   <DynamicTypographyComponent
-    as="caption"
-    classNameIdentifier="caption"
+    as="div"
+    classNameIdentifier="div"
     style={S.caption}
     {...props}
   />

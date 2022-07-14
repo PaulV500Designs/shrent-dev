@@ -12,8 +12,8 @@ import FieldWrapper from 'core/components/Elements/FieldWrapper';
 import { ParagraphLight, BodySmall, HeadingTwo, Caption } from 'core/components/Typography';
 
 import Icon from 'core/components/Icon';
-import EyeCrossed from 'core/components/Icon/svg/fi-rr-eye-crossed.svg';
-import EyeIcon from 'core/components/Icon/svg/fi-rr-eye.svg';
+import EyeCrossed from 'core/components/Icon/svg/fi-eye-crossed.svg';
+import EyeIcon from 'core/components/Icon/svg/fi-eye.svg';
 
 import ShrentLogo from 'assets/shrent-logo-web.png';
 import * as S from './page.style';
