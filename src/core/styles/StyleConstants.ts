@@ -41,7 +41,7 @@ export const StyleConstants = {
     paleyellow1: '#D7C481',
     paleyellow2: '#FAEDAB',
     metallicdarkgray: '#D1CFCB',
-    gray1: '#1C3454',
+    gray1: '#F6F8FA',
     gray2: '#38434D',
     gray3: '#526372',
     gray4: '#A9B1B8',

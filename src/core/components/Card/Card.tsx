@@ -4,28 +4,23 @@ import * as S from './Card.style';
 
 interface IProps {
 	noPadding?: boolean;
-	hover?: boolean;
 	withShadow?: boolean;
-	noBorder?: boolean;
-	/** Allow the content overflow the card container, e.g. dropdown selection */
-	allowOverflow?: boolean;
 	id?: string;
 	children: React.ReactNode;
+	className?: string;
 }
 
 const Card = ({
+	className = "",
 	noPadding = false,
 	withShadow = false,
-	noBorder = false,
-	hover = false,
-	allowOverflow = false,
 	id = 'cardComponent',
 	children
 }: IProps) => (
-	<S.Wrapper id={id}>
+	<S.Wrapper id={id} className={className}>
 		<S.Card
 			className="card"
-			{...{ withShadow, noBorder, hover, allowOverflow }}
+			{...{ withShadow }}
 		>
 			<S.Content {...{ noPadding }}>{children}</S.Content>
 		</S.Card>

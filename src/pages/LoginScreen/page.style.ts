@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { StyleConstants } from "core/styles/StyleConstants";
 import HeroBannerBG from "assets/welcome-screen-web-bg-1.png";
 
-export const WelcomeScreen = styled.section`
+export const PageContainer = styled.section`
   background-image: url(${HeroBannerBG}),
     linear-gradient(180deg, #dab9e6 12.19%, rgba(247, 210, 116, 0) 100%);
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@ export const WelcomeScreen = styled.section`
 
   .card {
     height: auto;
-    width: 450px;
+    width: 480px;
   }
 
   .cta--google {

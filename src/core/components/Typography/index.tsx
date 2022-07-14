@@ -24,14 +24,14 @@ type TypographyColorType =
   | 'error'
   | 'success';
 
-const colors = {
-  primary: '#3704FF',
-  default: '#000',
-  subdued: '#A9B1B8',
-  active: '',
-  error: '',
-  success: '',
-};
+// const colors = {
+//   primary: '#3704FF',
+//   default: '#000',
+//   subdued: '#A9B1B8',
+//   active: '',
+//   error: '',
+//   success: '',
+// };
 
 interface IProps extends Omit<React.HTMLAttributes<HTMLElement>, 'style'> {
   // ---------------------
