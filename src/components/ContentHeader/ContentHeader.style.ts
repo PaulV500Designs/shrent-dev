@@ -1,4 +1,4 @@
-import { StyleConstants } from 'core/styles/StyleConstants';
+import { StyleConstants } from '@/styles/StyleConstants';
 import styled from 'styled-components';
 
 export const ContentHeader = styled.div`

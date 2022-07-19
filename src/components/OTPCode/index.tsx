@@ -1,4 +1,4 @@
-import { StyleConstants } from 'core/styles/StyleConstants';
+import { StyleConstants } from '@/styles/StyleConstants';
 import * as React from 'react';
 import PinInput from 'react-pin-input';
 

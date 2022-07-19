@@ -1,4 +1,4 @@
-import { HeadingFour, SubHeading } from 'core/components/Typography';
+import { HeadingFour, SubHeading } from '@/components/Typography';
 import React from 'react';
 
 import * as S from './ContentHeader.style';

@@ -1,4 +1,4 @@
-import { StyleConstants } from 'core/styles/StyleConstants';
+import { StyleConstants } from '@/styles/StyleConstants';
 import { css } from 'styled-components/macro';
 
 type FormFieldStylesProps = {

@@ -78,7 +78,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   /* NOTE: Component-level typography is driven by the styled
-    component exports found in 'core/styles/Typography'. */
+    component exports found in '@/styles/Typography'. */
     ${globalTypography}
 
   /* Styled for RTE typography

@@ -1,5 +1,5 @@
-import * as mx from 'core/styles/mixins';
-import { StyleConstants } from 'core/styles/StyleConstants';
+import * as mx from '@/styles/mixins';
+import { StyleConstants } from '@/styles/StyleConstants';
 import type { FlattenSimpleInterpolation as CSS } from 'styled-components';
 import styled, { css } from 'styled-components';
 
