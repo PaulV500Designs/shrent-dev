@@ -1,7 +1,8 @@
-import bgSrc from 'assets/images/welcome-screen-web-bg-1.png';
 import styled from 'styled-components';
 
 import { StyleConstants } from '@/styles/StyleConstants';
+
+const bgSrc = '/assets/images/welcome-screen-web-bg-1.png';
 
 export const PageContainer = styled.section`
   background-image: url(${bgSrc}),

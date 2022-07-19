@@ -34,6 +34,8 @@ import * as S from './Cta.style';
 
 // ------------------------------------------
 
+// TODO: implement TS types PascalCase standarx
+
 type onClickType =
   | React.MouseEvent<HTMLButtonElement>
   | React.MouseEvent<HTMLAnchorElement>

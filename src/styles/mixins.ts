@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-export const keyboardOnly = (styles) => css`
+export const keyboardOnly = (styles: any) => css`
   [data-whatinput='keyboard'] & {
     ${styles}
   }

@@ -1,6 +1,8 @@
-import { StyleConstants } from '@/styles/StyleConstants';
+/* eslint-disable tailwindcss/no-custom-classname */
 import * as React from 'react';
 import styled from 'styled-components/macro';
+
+import { StyleConstants } from '@/styles/StyleConstants';
 
 const Wrapper = styled.label`
   display: inline-flex;

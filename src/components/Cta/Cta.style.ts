@@ -1,7 +1,9 @@
-import * as mx from '@/styles/mixins';
-import { StyleConstants } from '@/styles/StyleConstants';
+/* eslint-disable unused-imports/no-unused-vars */
 import type { FlattenSimpleInterpolation as CSS } from 'styled-components';
 import styled, { css } from 'styled-components';
+
+import * as mx from '@/styles/mixins';
+import { StyleConstants } from '@/styles/StyleConstants';
 
 export interface CtaStateType {
   color?: string | null;
@@ -158,6 +160,8 @@ export const classNameCtas = css`
   }
 
   .${CTA_CLASS} {
+    // TODO: find usage for theme inside this file
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     ${({ theme }) => {
       const { ctas } = StyleConstants;
 

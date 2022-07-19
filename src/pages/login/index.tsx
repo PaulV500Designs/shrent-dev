@@ -18,8 +18,8 @@ import {
   HeadingTwo,
   ParagraphLight,
 } from '@/components/Typography';
-import LogoSrc from '~/assets/images/shrent-logo-web.png';
 
+// import LogoSrc from '../../assets/images/shrent-logo-web.png';
 import * as S from './page.style';
 
 export default function LoginScreen() {
@@ -37,7 +37,8 @@ export default function LoginScreen() {
     <S.PageContainer id="welcomeScreen">
       <S.LogoContainer className="logo-container">
         <img src="image" alt="" />
-        <Image src={LogoSrc} />
+        {/* <Image src={LogoSrc} /> */}
+        <Image src="/assets/images/shrent-logo-web.png" alt="logo" />
         <HeadingTwo margin="40px 0 0">Why buy it, Shrent it.</HeadingTwo>
       </S.LogoContainer>
       <Card id="welcomeScreenCard" withShadow>
