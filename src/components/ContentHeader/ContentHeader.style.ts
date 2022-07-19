@@ -1,5 +1,6 @@
-import { StyleConstants } from '@/styles/StyleConstants';
 import styled from 'styled-components';
+
+import { StyleConstants } from '@/styles/StyleConstants';
 
 export const ContentHeader = styled.div`
   text-align: center;

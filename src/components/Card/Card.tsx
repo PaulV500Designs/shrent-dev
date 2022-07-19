@@ -10,7 +10,7 @@ interface IProps {
   className?: string;
 }
 
-const Card = ({
+export const Card = ({
   className = '',
   noPadding = false,
   withShadow = false,
