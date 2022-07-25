@@ -24,14 +24,14 @@ type TypographyColorType =
   | 'error'
   | 'success';
 
-// const colors = {
-//   primary: '#3704FF',
-//   default: '#000',
-//   subdued: '#A9B1B8',
-//   active: '',
-//   error: '',
-//   success: '',
-// };
+const colors = {
+  primary: '#3704FF',
+  default: '#000',
+  subdued: '#6E7387',
+  active: '',
+  error: '#F56646',
+  success: '',
+};
 
 interface IProps extends Omit<React.HTMLAttributes<HTMLElement>, 'style'> {
   // ---------------------
@@ -117,7 +117,7 @@ const DynamicTypographyComponent = ({
   );
 
   const inlineStyles = {
-    // color: !!color ? colors[color] : colors.default,
+    color: !!color ? colors[color] : colors.default,
     display: inline ? 'inline-block' : 'block',
     textDecoration,
     fontStyle,
@@ -324,8 +324,8 @@ export const BodySmall = (props: ITypoProps) => (
 
 export const Caption = (props: ITypoProps) => (
   <DynamicTypographyComponent
-    as="div"
-    classNameIdentifier="div"
+    as="caption"
+    classNameIdentifier="caption"
     style={S.caption}
     {...props}
   />

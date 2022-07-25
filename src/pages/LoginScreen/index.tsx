@@ -61,7 +61,7 @@ export default function LoginScreen() {
                     /> */}
                 </CtaContainer>
                 <S.OR>
-                    <Caption margin="0">OR</Caption>
+                    <Caption tag="div" margin="0">OR</Caption>
                 </S.OR>
                 <S.Form onSubmit={onSubmit}>
                     <FieldWrapper>

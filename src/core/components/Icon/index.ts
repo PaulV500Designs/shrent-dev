@@ -35,11 +35,17 @@ const large = css`
   width: 60px;
 `;
 
+const xlarge = css`
+  height: 80px;
+  width: 80px;
+`;
+
 const Icon = styled.img<IconProps>`
   ${p => p.size === 'xsmall' && xsmall};
   ${p => p.size === 'small' && small};
   ${p => p.size === 'medium' && medium};
   ${p => p.size === 'large' && large};
+  ${p => p.size === 'xlarge' && xlarge};
   margin: ${p => (p.margin ? p.margin : undefined)};
   cursor: inherit;
 

@@ -1,6 +1,7 @@
 import * as React from 'react';
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 import { StyleConstants } from 'core/styles/StyleConstants';
+import PhoneNumberInput from 'react-phone-number-input/input'
 
 import FormFieldStyles from './FormFieldStyles';
 import ErrorMsg from './ErrorMsg';
@@ -46,6 +47,25 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
    * @default false
    */
   fullWidth?: boolean;
+  /**
+   * Function onChange for PhoneInput
+   * @returns event
+   */
+  onChange?: any;
+  /**
+   * Render Phone Number Input
+   * @returns Phone Number Input Element
+   */
+  isPhoneNumber?: boolean;
+  /**
+   * Show value for the Input element
+   * @returns Phone Number Input Element
+   */
+  value?: string;
+  /**
+   * Show border bottom only
+   */
+  borderBottomOnly?: boolean;
 }
 
 const InputWrapper = styled.div<{
@@ -108,11 +128,20 @@ const InputStyle = styled.input<{
   error?: boolean;
   paddingleft?: number;
   paddingright?: number;
+  borderBottomOnly?: boolean;
 }>`
   ${FormFieldStyles};
   ${p => p.paddingleft && `padding-left: ${p.paddingleft + 10}px`};
   ${p => p.paddingright && `padding-right: ${p.paddingright + 10}px`};
   flex-grow: 1;
+
+  ${({ borderBottomOnly }) =>
+		borderBottomOnly &&
+		css`
+      border: 0;
+      border-bottom: 1px solid  ${StyleConstants.color.black};
+      border-radius: 0;
+		`}
 `;
 
 /**
@@ -128,6 +157,10 @@ export default function Input({
   error,
   errorMsg,
   fullWidth,
+  onChange,
+  isPhoneNumber,
+  borderBottomOnly = false,
+  value,
   ...rest
 }: InputProps) {
   const prefixRef = React.useRef<any>(null);
@@ -193,12 +226,26 @@ export default function Input({
           {prefix}
         </span>
       )}
-      <InputStyle
-        {...rest}
-        error={error || undefined}
-        paddingleft={padLeft}
-        paddingright={padRight}
-      />
+      {isPhoneNumber ? (
+        <PhoneNumberInput
+          country="US"
+          international
+          withCountryCallingCode
+          inputComponent={InputStyle}
+          onChange={onChange}
+          value={value}
+        />
+      ) : (
+          <InputStyle
+            {...rest}
+            error={error || undefined}
+            paddingleft={padLeft}
+            paddingright={padRight}
+            value={value}
+            onChange={onChange}
+            borderBottomOnly={borderBottomOnly}
+          />
+        )}
       {React.isValidElement(icon) && iconComponent}
       {error && <ErrorMsg>{errorMsg}</ErrorMsg>}
     </InputWrapper>

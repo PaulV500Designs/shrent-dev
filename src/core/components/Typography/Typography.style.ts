@@ -347,18 +347,6 @@ export const globalTypography: any = css`
     list-style: none;
 
     > li {
-      &::before {
-        position: absolute;
-        content: '·';
-        font-size: 50px;
-        left: -18px;
-        top: 11px;
-        line-height: 0;
-
-        /* So the content in any given pseudo element are
-				not selectable with the cursor. */
-        pointer-events: none;
-      }
 
       ul > li {
         &::before {

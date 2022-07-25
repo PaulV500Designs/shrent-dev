@@ -8,6 +8,7 @@ import Layout from 'core/components/Layout'
 import LoginScreen from 'pages/LoginScreen';
 import CreateAccountScreen from 'pages/CreateAccountScreen';
 import VerifyOTPScreen from 'pages/VerifyOTPScreen';
+import DashboardScreen from 'pages/DashboardScreen';
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
                 <Route path="/" element={<LoginScreen />} />
                 <Route path="/create-account" element={<CreateAccountScreen />} />
                 <Route path="/verify-otp" element={<VerifyOTPScreen />} />
+                <Route path="/dashboard" element={<DashboardScreen />} />
             </Routes>
             <GlobalStyle />
         </Layout>

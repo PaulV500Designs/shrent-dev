@@ -5,7 +5,6 @@ import styled from 'styled-components/macro';
  * Will change layout depending if user is logged in or not
  */
 export const Layout = styled.main`
-  height: 100vh;
-  width: 100%;
+    height: 100%;
 `;
 

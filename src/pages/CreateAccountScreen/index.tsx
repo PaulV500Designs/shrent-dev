@@ -9,6 +9,7 @@ import ContentHeader from 'core/components/ContentHeader';
 import Checkbox from 'core/components/Elements/Checkbox';
 import Input from 'core/components/Elements/Input';
 import FieldWrapper from 'core/components/Elements/FieldWrapper';
+import PhoneNumberInput from 'core/components/Elements/PhoneNumberInput';
 import { ParagraphLight, BodySmall, HeadingTwo, Caption } from 'core/components/Typography';
 
 import Icon from 'core/components/Icon';
@@ -19,22 +20,55 @@ import ShrentLogo from 'assets/shrent-logo-web.png';
 import * as S from './page.style';
 import * as LoginStyle from '../LoginScreen/page.style';
 
+const URL = 'https://shrent.500designs.com/api/auth/register';
+
+const initialFormData = {
+    name: '',
+    mobile_number: '',
+    email_address: '',
+    password: '',
+    confirmPassword: '',
+};
+
 export default function CreateAccountScreen() {
     const navigate = useNavigate();
     const [showPass, setShowPass] = useState<boolean>(false);
-    const ssoCTA = response => {
-        console.log('response', response);
-    }
+    const [formData, setFormData] = useState<any>(initialFormData);
 
     const onSubmit = (e) => {
         e.preventDefault();
+
+        console.log('formData', formData);
+        sendData(formData);
+    };
+
+    const handleFormData = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    }
+
+    const sendData = async (data) => {
+        const fData: any = new FormData();
+
+        for (const [key, value] of Object.entries(data)) {
+            fData.append(key, value);
+        }
+
+        const response = await fetch(URL, {
+            method: 'POST',
+            body: fData,
+        });
+
+        console.log('response', response);
     };
 
     return (
         <LoginStyle.PageContainer id="CreateAccountScreen">
             <LoginStyle.LogoContainer className="logo-container">
                 <img src={ShrentLogo} alt="" />
-                <HeadingTwo margin="40px 0 0">Why buy it, Shrent it.</HeadingTwo>
+                <HeadingTwo margin="40px 0 0" color="default">Why buy it, Shrent it.</HeadingTwo>
             </LoginStyle.LogoContainer>
             <Card withShadow>
                 <ContentHeader
@@ -62,35 +96,45 @@ export default function CreateAccountScreen() {
                     /> */}
                 </CtaContainer>
                 <LoginStyle.OR>
-                    <Caption margin="0">OR</Caption>
+                    <Caption tag="div" margin="0">OR</Caption>
                 </LoginStyle.OR>
                 <LoginStyle.Form onSubmit={onSubmit}>
                     <FieldWrapper>
-                        <ParagraphLight margin="0 0 3px">Username</ParagraphLight>
+                        <ParagraphLight margin="0 0 3px">Username <span className="text-red">*</span></ParagraphLight>
                         <Input
                             fullWidth
                             type="text"
                             errorMsg="Please enter your username"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleFormData}
                         />
                     </FieldWrapper>
                     <FieldWrapper>
-                        <ParagraphLight margin="0 0 3px">Mobile Number</ParagraphLight>
+                        <ParagraphLight margin="0 0 3px">Mobile Number <span className="text-red">*</span></ParagraphLight>
+                        <Input
+                            isPhoneNumber
+                            fullWidth
+                            type="text"
+                            errorMsg="Please enter your Mobile Number"
+                            name="mobile_number"
+                            value={formData.mobile_number}
+                            onChange={(val: string) => setFormData({ ...formData, mobile_number: val})}
+                        />
+                    </FieldWrapper>
+                    <FieldWrapper>
+                        <ParagraphLight margin="0 0 3px">Email Address <span className="text-red">*</span></ParagraphLight>
                         <Input
                             fullWidth
                             type="text"
-                            errorMsg="Please enter your username"
+                            errorMsg="Please enter your Email Address"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleFormData}
                         />
                     </FieldWrapper>
                     <FieldWrapper>
-                        <ParagraphLight margin="0 0 3px">Email Address</ParagraphLight>
-                        <Input
-                            fullWidth
-                            type="text"
-                            errorMsg="Please enter your username"
-                        />
-                    </FieldWrapper>
-                    <FieldWrapper>
-                        <ParagraphLight margin="0 0 3px">Password</ParagraphLight>
+                        <ParagraphLight margin="0 0 3px">Password <span className="text-red">*</span></ParagraphLight>
                         <Input
                             fullWidth
                             type={showPass ? 'text' : 'password'}
@@ -98,11 +142,14 @@ export default function CreateAccountScreen() {
                             iconPosition="right"
                             iconColor="secondary"
                             onIconClick={() => setShowPass(prev => !prev)}
+                            name="password"
+                            value={formData.password}
+                            onChange={handleFormData}
                             errorMsg="Please enter your password"
                         />
                     </FieldWrapper>
                     <FieldWrapper>
-                        <ParagraphLight margin="0 0 3px">Confirm Password</ParagraphLight>
+                        <ParagraphLight margin="0 0 3px">Confirm Password <span className="text-red">*</span></ParagraphLight>
                         <Input
                             fullWidth
                             type={showPass ? 'text' : 'password'}
@@ -110,6 +157,9 @@ export default function CreateAccountScreen() {
                             iconPosition="right"
                             iconColor="secondary"
                             onIconClick={() => setShowPass(prev => !prev)}
+                            name="confirmPassword"
+                            value={formData.confirmPassword}
+                            onChange={handleFormData}
                             errorMsg="Please enter your password"
                         />
                     </FieldWrapper>
@@ -123,7 +173,7 @@ export default function CreateAccountScreen() {
                             ctaStyle="primary"
                             ctaType="button"
                             size="large"
-                            onClick={() => {}}
+                            onClick={() => { }}
                         >
                             Next
                         </Cta>

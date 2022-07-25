@@ -5,7 +5,7 @@ export const ContentHeader = styled.div`
   text-align: center;
   margin-bottom: 40px;
 
-  .typography--headingFour {
+  .typography--heading {
     line-height: 22px;
   }
   

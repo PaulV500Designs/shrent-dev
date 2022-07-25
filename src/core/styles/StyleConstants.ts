@@ -50,7 +50,7 @@ export const StyleConstants = {
     highlight: '#FAFAFA',
     tones: {
       mute: '#F0F0F0',
-      red: '#FF645E',
+      red: '#F56646',
       green: '#28A745',
       blue: '#007BFF',
       yellow: '#F6E6C4',
