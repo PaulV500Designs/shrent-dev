@@ -11,5 +11,6 @@ export const callbackExists = (cb: any) => !!cb && typeof cb === 'function';
  * @param {Object} params - Callback parameters.
  * @returns {Function|null}
  */
-export const executeCallback = (cb: any, ...params) =>
+
+export const executeCallback = (cb: any, ...params: any) =>
   callbackExists(cb) ? cb(...params) : null;

@@ -101,3 +101,5 @@ export const HaveAccount = styled.div`
     }
   }
 `;
+
+export default PageContainer;
