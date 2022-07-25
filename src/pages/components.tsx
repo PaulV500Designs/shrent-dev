@@ -1,6 +1,8 @@
 // !STARTERCONF You can delete this page
 import * as React from 'react';
+import 'twin.macro';
 
+import Button from '@/components/Button';
 import Header from '@/components/Header';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
@@ -24,17 +26,30 @@ export default function ComponentsPage() {
         description='Pre-built components with awesome default'
       />
 
-      <Container>
-        <Header />
-        <section
-          className={`flex flex-col items-center gap-10 px-10 py-10 ${textColor} ${bgColor}`}
-        >
-          <h3>Kitchen Sink Here...</h3>
-          <button className={`${textColor} border p-5`} onClick={toggleMode}>
-            Toggle theme mode
-          </button>
-        </section>
-      </Container>
+
+      <Header />
+      <section
+        className={`flex flex-col items-center gap-10 px-10 py-10 ${textColor} ${bgColor}`}
+      >
+        <Container>
+          <h2>Kitchen Sink </h2>
+        </Container>
+      </section>
+
+      <section tw="w-full bg-gray-300 py-10">
+        <Container>
+          <h3>Buttons:</h3>
+          <div tw="flex flex-row gap-5 w-full">
+            <Button>Default</Button>
+            <Button variant="primary">Primary</Button>
+            <Button variant="secondary">Secondary Button</Button>
+            <Button variant="outline">Outline Button</Button>
+            <Button variant="white-outline">White Outline Button</Button>
+          </div>
+        </Container>
+      </section>
+
+
     </Layout>
   );
 }

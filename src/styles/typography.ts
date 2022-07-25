@@ -19,8 +19,15 @@ const Typography = css`
   main {
     h1,
     h2,
+    h3,
     h4 {
-      ${tw`font-heading`};
+      ${tw`font-heading font-semibold`};
+    }
+    h1 {
+      font-size: 60px;
+    }
+    h2 {
+      font-size: 50px;
     }
   }
 `;

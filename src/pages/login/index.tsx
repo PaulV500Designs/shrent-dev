@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
+import 'twin.macro';
 
 import Card from '@/components/Card';
 import ContentHeader from '@/components/ContentHeader';
@@ -17,6 +18,9 @@ import GoogleLogo from '~/svgs/google-logo.svg';
 
 const EyeIconUrl = '/svgs/icons/fi-eye.svg';
 const EyeCrossedUrl = '/svgs/icons/fi-eye-crossed.svg';
+
+
+import Button from '@/components/Button';
 
 import * as S from './page.style';
 
@@ -46,16 +50,10 @@ export default function LoginScreen() {
             subTitle='Welcome back, please enter your details.'
           />
           <CtaContainer direction='column'>
-            <Cta
-              className='cta--google'
-              ctaStyle='outline'
-              ctaType='button'
-              size='large'
-              onClick={() => { }}
-            >
+            <Button variant='outline'>
               <GoogleLogo />
               Continue with Google
-            </Cta>
+            </Button>
             {/* <GoogleLogin
                         className="cta cta-outline"
                         clientId="38744847901-nqp81mfdsoroqppam0bceqs9ikmgfhsi.apps.googleusercontent.com"
@@ -92,28 +90,14 @@ export default function LoginScreen() {
                 errorMsg='Please enter your password'
               />
             </FieldWrapper>
-            <S.RememberMe>
+            <div tw='flex flex-row justify-between'>
               <Checkbox text='Remember me' value='check2' onChange={() => { }} />
-              <Cta
-                ctaStyle='plain'
-                ctaType='button'
-                isWithoutPadding
-                size='large'
-                onClick={() => { }}
-              >
-                Forgot Password?
-              </Cta>
-            </S.RememberMe>
-            <CtaContainer direction='column' margin='40px 0 0'>
-              <Cta
-                ctaStyle='primary'
-                ctaType='button'
-                size='large'
-                onClick={() => { }}
-              >
-                Log in
-              </Cta>
-            </CtaContainer>
+              <Button variant="unstyled" onClick={() => { }} > Forgot Password? </Button>
+            </div>
+            <Button>
+              Log in
+            </Button>
+
             <S.HaveAccount>
               <small>Don’t have an account?</small>
               <Cta

@@ -43,14 +43,14 @@ type onClickType =
 export interface CtaProps {
   className?: string;
   ctaStyle?:
-    | 'primary'
-    | 'secondary'
-    | 'plain'
-    | 'outline'
-    | 'mute'
-    | 'warning'
-    | 'success'
-    | 'disabled';
+  | 'primary'
+  | 'secondary'
+  | 'plain'
+  | 'outline'
+  | 'mute'
+  | 'warning'
+  | 'success'
+  | 'disabled';
   ctaType?: 'anchor' | 'button' | 'cosmetic' | 'unstyled';
   size?: 'xsmall' | 'small' | 'medium' | 'large';
 
@@ -140,24 +140,24 @@ const Cta = ({
     'aria-disabled': !isButton ? disabledState : undefined,
     className: !isUnstyled
       ? cx(S.CTA_CLASS, {
-          // Styles --------------------------------
-          'cta-primary': ctaStyle === 'primary',
-          'cta-secondary': ctaStyle === 'secondary',
-          'cta-plain': ctaStyle === 'plain',
-          'cta-outline': ctaStyle === 'outline',
-          'cta-mute': ctaStyle === 'mute',
-          'cta-warning': ctaStyle === 'warning',
-          'cta-success': ctaStyle === 'success',
+        // Styles --------------------------------
+        'cta-primary': ctaStyle === 'primary',
+        'cta-secondary': ctaStyle === 'secondary',
+        'cta-plain': ctaStyle === 'plain',
+        'cta-outline': ctaStyle === 'outline',
+        'cta-mute': ctaStyle === 'mute',
+        'cta-warning': ctaStyle === 'warning',
+        'cta-success': ctaStyle === 'success',
 
-          // States & flags ------------------------
-          '-alert': isAlert,
-          '-disabled': isDisabled ?? isLoading,
-          '-hovered': isHovered,
-          '-inverted': isInverted,
-          '-linkAlike': isLinkAlike,
-          '-withoutPadding': isWithoutPadding,
-          '--full-width': fullWidth,
-        })
+        // States & flags ------------------------
+        '-alert': isAlert,
+        '-disabled': isDisabled ?? isLoading,
+        '-hovered': isHovered,
+        '-inverted': isInverted,
+        '-linkAlike': isLinkAlike,
+        '-withoutPadding': isWithoutPadding,
+        '--full-width': fullWidth,
+      })
       : undefined,
     onClick: (event: onClickType) => {
       // Suppress `href` navigation for disabled hyperlinks
@@ -176,7 +176,7 @@ const Cta = ({
   const ctaIcon = icon ? (
     <span>ICON</span>
   ) : // <Icon className="icon" src={icon} size={size} />
-  null;
+    null;
   /**
    *  change the <S.Cta> into <S.Cta className="cta__wrapper" style={{ width: fullWidth ? '100%' : 'auto' }}>
    *  const CtaWrapperClassName = cx('cta__wrapper', { '--full-width': fullWidth });
