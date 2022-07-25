@@ -19,7 +19,7 @@ import * as LoginStyle from '@/pages/login/page.style';
 
 import * as S from './page.style';
 
-import ShrentLogo from '~/images/shrent-logo-web.png';
+const ShrentLogo = '~/images/shrent-logo-web.png';
 
 export default function CreateAccountScreen() {
     const router = useRouter();

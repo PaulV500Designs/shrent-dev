@@ -2,7 +2,7 @@ import Link from 'next/link';
 import * as React from 'react';
 
 import Cards from '@/components/cards';
-import Layout from '@/components/layout/Layout';
+import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 
 import {

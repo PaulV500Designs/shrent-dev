@@ -4,7 +4,7 @@ import { RiAlarmWarningFill } from 'react-icons/ri';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-import Layout from '@/components/layout/Layout';
+import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 
 import { Container } from '@/styles/sharedstyles';

@@ -57,6 +57,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - lowerCamelCase - variable / parameter / function / method / property / module alias
 - CONSTANT_CASE - global constant values, including enum values
 - CSS-in-JS - follow [Airbnb Style Guide](https://github.com/airbnb/javascript/tree/master/css-in-javascript#naming)
+- Avoid using abbreviations in variables i.e. for "getTZ" use getTimeZone / getTimezone
 
 ### Requirements before making PR / Merges
 

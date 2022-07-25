@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { styleConstants } from '@/styles/styleConstants';
 import PinInput from 'react-pin-input';
+
+import { styleConstants } from '@/styles/styleConstants';
 
 interface OTPCodeProps {
   length: number;

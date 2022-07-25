@@ -2,8 +2,8 @@
  * TODO: Update the props and styling
  * make it more flexible for orientation
  */
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
 
 import * as S from './Cta.style';
 

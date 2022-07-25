@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import tw from 'twin.macro';
 
 import { styleConstants } from '@/styles/styleConstants';
 
-const heroBannerBg = '~/image/welcome-screen-web-bg-1.png';
+const heroBannerBg = '/images/welcome-screen-web-bg-1.png';
 
 export const PageContainer = styled.section`
   background-image: url(${heroBannerBg}),
@@ -14,6 +15,7 @@ export const PageContainer = styled.section`
   justify-content: space-between;
   padding: 80px 50px;
   height: 100%;
+  ${tw`min-h-screen`}
 
   .card {
     height: auto;

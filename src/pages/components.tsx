@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 import Header from '@/components/Header';
-import Layout from '@/components/layout/Layout';
+import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 
 import { Container } from '@/styles/sharedstyles';
