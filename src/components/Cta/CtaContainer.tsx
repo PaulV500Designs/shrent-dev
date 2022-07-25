@@ -18,7 +18,12 @@ interface CtaContainerTypes extends React.HTMLAttributes<HTMLElement> {
   padding?: string;
 }
 
-const CtaContainer = ({ children, direction, margin, padding }: CtaContainerTypes) => {
+const CtaContainer = ({
+  children,
+  direction,
+  margin,
+  padding,
+}: CtaContainerTypes) => {
   const className = cx('cta-container', {
     '--column': direction === 'column',
   });

@@ -33,13 +33,9 @@ export default function NotFoundPage() {
       <Section>
         <Container>
           <Inner>
-            <RiAlarmWarningFill
-              size={60}
-            />
+            <RiAlarmWarningFill size={60} />
             <h1>Page Not Found</h1>
-            <Link href='/'>
-              Back to Home
-            </Link>
+            <Link href='/'>Back to Home</Link>
           </Inner>
         </Container>
       </Section>

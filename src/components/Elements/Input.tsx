@@ -55,14 +55,14 @@ const InputWrapper = styled.div<{
   full?: boolean;
 }>`
   position: relative;
-  display: ${p => (p.full ? 'block' : 'inline-block')};
-  width: ${p => (p.full ? '100%' : 'auto')};
+  display: ${(p) => (p.full ? 'block' : 'inline-block')};
+  width: ${(p) => (p.full ? '100%' : 'auto')};
 
   .input-pre {
     position: absolute;
     top: 12px;
     /* transform: translateY(-50%); */
-    left: ${p => (p.hasicon ? '50px' : '10px')};
+    left: ${(p) => (p.hasicon ? '50px' : '10px')};
     padding: 0 2px;
     opacity: 0.7;
   }
@@ -78,7 +78,7 @@ const InputWrapper = styled.div<{
     justify-content: center;
     line-height: 1;
     padding: 10px;
-    opacity: ${p => (p.iconcolor === 'primary' ? '1' : '0.6')};
+    opacity: ${(p) => (p.iconcolor === 'primary' ? '1' : '0.6')};
 
     &.left {
       left: 3px;
@@ -111,8 +111,8 @@ const InputStyle = styled.input<{
   paddingright?: number;
 }>`
   ${FormFieldStyles};
-  ${p => p.paddingleft && `padding-left: ${p.paddingleft + 10}px`};
-  ${p => p.paddingright && `padding-right: ${p.paddingright + 10}px`};
+  ${(p) => p.paddingleft && `padding-left: ${p.paddingleft + 10}px`};
+  ${(p) => p.paddingright && `padding-right: ${p.paddingright + 10}px`};
   flex-grow: 1;
 `;
 
@@ -167,7 +167,7 @@ export default function Input({
   if (React.isValidElement(icon) && onIconClick) {
     iconComponent = (
       <button
-        type="button"
+        type='button'
         onClick={onClick}
         className={`input-icon ${iconPosition}`}
         tabIndex={-1}
@@ -191,7 +191,7 @@ export default function Input({
       full={fullWidth || undefined}
     >
       {prefix && (
-        <span ref={prefixRef} className="input-pre">
+        <span ref={prefixRef} className='input-pre'>
           {prefix}
         </span>
       )}

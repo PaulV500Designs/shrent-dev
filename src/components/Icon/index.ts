@@ -36,11 +36,11 @@ const large = css`
 `;
 
 const Icon = styled.img<IconProps>`
-  ${p => p.size === 'xsmall' && xsmall};
-  ${p => p.size === 'small' && small};
-  ${p => p.size === 'medium' && medium};
-  ${p => p.size === 'large' && large};
-  margin: ${p => (p.margin ? p.margin : undefined)};
+  ${(p) => p.size === 'xsmall' && xsmall};
+  ${(p) => p.size === 'small' && small};
+  ${(p) => p.size === 'medium' && medium};
+  ${(p) => p.size === 'large' && large};
+  margin: ${(p) => (p.margin ? p.margin : undefined)};
   cursor: inherit;
 
   /* &:hover {

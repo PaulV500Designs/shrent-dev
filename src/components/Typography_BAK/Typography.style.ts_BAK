@@ -28,7 +28,7 @@ export const displayOne: any = css`
 export const displayTwo: any = css`
   font-size: 88px;
   font-weight: 600;
-  line-height: 132px;
+  line-height: 132Why buy it, Shrent it.px;
 
   /*  */
   margin: 0 0 32px;

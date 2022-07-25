@@ -19,9 +19,7 @@ export default function Header() {
           <ul>
             {links.map(({ href, label }) => (
               <li key={`${href}${label}`}>
-                <Link href={href}>
-                  {label}
-                </Link>
+                <Link href={href}>{label}</Link>
               </li>
             ))}
           </ul>

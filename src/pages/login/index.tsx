@@ -14,18 +14,17 @@ import Icon from '@/components/Icon';
 import EyeIcon from '@/components/Icon/svg/fi-eye.svg';
 import EyeCrossed from '@/components/Icon/svg/fi-eye-crossed.svg';
 import Layout from '@/components/Layout';
-import { BodySmall, Caption, HeadingTwo, ParagraphLight } from '@/components/Typography';
 
 import * as S from './page.style';
 
-import ShrentLogo from '~/images/shrent-logo-web.png';
+const shrentLogoUrl = '/images/shrent-logo-web.png';
 
 export default function LoginScreen() {
   const router = useRouter();
   const [showPass, setShowPass] = useState<boolean>(false);
-  const ssoCTA = (response: any) => {
-    console.log('response', response);
-  }
+  // const ssoCTA = (response: any) => {
+  //   console.log('response', response);
+  // };
 
   const onSubmit = (e: any) => {
     e.preventDefault();
@@ -33,22 +32,22 @@ export default function LoginScreen() {
 
   return (
     <Layout>
-      <S.PageContainer id="welcomeScreen">
-        <S.LogoContainer className="logo-container">
-          <Image src={ShrentLogo} alt="logo" />
-          <HeadingTwo margin="40px 0 0">Why buy it, Shrent it.</HeadingTwo>
+      <S.PageContainer id='welcomeScreen'>
+        <S.LogoContainer className='logo-container'>
+          <Image src={shrentLogoUrl} alt='logo' width={100} height={100} />
+          <h2>Why buy it, Shrent it.</h2>
         </S.LogoContainer>
-        <Card id="welcomeScreenCard" withShadow>
+        <Card id='welcomeScreenCard' withShadow>
           <ContentHeader
-            title="Log in to your account"
-            subTitle="Welcome back, please enter your details."
+            title='Log in to your account'
+            subTitle='Welcome back, please enter your details.'
           />
-          <CtaContainer direction="column">
+          <CtaContainer direction='column'>
             <Cta
-              className="cta--google"
-              ctaStyle="outline"
-              ctaType="button"
-              size="large"
+              className='cta--google'
+              ctaStyle='outline'
+              ctaType='button'
+              size='large'
               onClick={() => { }}
             >
               Continue with Google
@@ -64,63 +63,63 @@ export default function LoginScreen() {
                     /> */}
           </CtaContainer>
           <S.OR>
-            <Caption margin="0">OR</Caption>
+            <caption>OR</caption>
           </S.OR>
           <S.Form onSubmit={onSubmit}>
             <FieldWrapper>
-              <ParagraphLight margin="0 0 3px">Username</ParagraphLight>
+              <p>Username</p>
               <Input
                 fullWidth
-                type="text"
-                errorMsg="Please enter your username"
+                type='text'
+                errorMsg='Please enter your username'
               />
             </FieldWrapper>
             <FieldWrapper>
-              <ParagraphLight margin="0 0 3px">Password</ParagraphLight>
+              <p>Password</p>
               <Input
                 fullWidth
                 type={showPass ? 'text' : 'password'}
-                icon={<Icon src={showPass ? EyeIcon : EyeCrossed} size="small" />}
-                iconPosition="right"
-                iconColor="secondary"
-                onIconClick={() => setShowPass(prev => !prev)}
-                errorMsg="Please enter your password"
+                icon={
+                  <Icon src={showPass ? EyeIcon : EyeCrossed} size='small' />
+                }
+                iconPosition='right'
+                iconColor='secondary'
+                onIconClick={() => setShowPass((prev) => !prev)}
+                errorMsg='Please enter your password'
               />
             </FieldWrapper>
             <S.RememberMe>
-              <Checkbox
-                text="Remember me"
-                value="check2"
-                onChange={() => { }}
-              />
+              <Checkbox text='Remember me' value='check2' onChange={() => { }} />
               <Cta
-                ctaStyle="plain"
-                ctaType="button"
+                ctaStyle='plain'
+                ctaType='button'
                 isWithoutPadding
-                size="large"
+                size='large'
                 onClick={() => { }}
               >
                 Forgot Password?
               </Cta>
             </S.RememberMe>
-            <CtaContainer direction="column" margin="40px 0 0">
+            <CtaContainer direction='column' margin='40px 0 0'>
               <Cta
-                ctaStyle="primary"
-                ctaType="button"
-                size="large"
+                ctaStyle='primary'
+                ctaType='button'
+                size='large'
                 onClick={() => { }}
               >
                 Log in
               </Cta>
             </CtaContainer>
             <S.HaveAccount>
-              <BodySmall margin="0 5px 0 0">Don’t have an account?</BodySmall>
+              <small>Don’t have an account?</small>
               <Cta
-                ctaStyle="plain"
-                ctaType="button"
+                ctaStyle='plain'
+                ctaType='button'
                 isWithoutPadding
-                size="large"
-                onClick={() => router.push('/create-account', undefined, { shallow: true })}
+                size='large'
+                onClick={() =>
+                  router.push('/create-account', undefined, { shallow: true })
+                }
               >
                 Sign up
               </Cta>
@@ -129,5 +128,5 @@ export default function LoginScreen() {
         </Card>
       </S.PageContainer>
     </Layout>
-  )
+  );
 }

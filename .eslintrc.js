@@ -22,7 +22,7 @@ module.exports = {
       'warn',
       { props: 'never', children: 'never' },
     ],
-    'react/no-multi-comp': ['error', { 'ignoreStateless': true }],
+    'react/no-multi-comp': ['error', { ignoreStateless: true }],
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'warn',
     'unused-imports/no-unused-vars': [

@@ -8,6 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
+        secondary: ['Titillium Web', ...fontFamily.serif],
+        body: ['Inter', ...fontFamily.sans],
+        heading: ['Titillium Web', ...fontFamily.serif],
       },
       keyframes: {
         flicker: {
