@@ -4,7 +4,7 @@ import tw from 'twin.macro';
 const Typography = css`
   html,
   body {
-    ${tw`font-primary`};
+    ${tw`font-primary font-normal`};
   }
 
   a {

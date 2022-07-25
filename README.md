@@ -41,7 +41,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Stands / Patterns / Conventions
 
 - Use functional components
-- Prevent multiple component definition per file
+- Pratice KISS - avoid making unecessary logic and functions,
+  each project is custom and must match only Figma components,
+  if there are obvious reusable patterns, add them to our Company starter themes.
+- Practice DRY - but keep it simple
+- Use only inline tailwind styles only for quick layout i.e. tw='flex flex-col gap-5', the rest place in styled components
+- Multiple component definition per file, is not allowed
 - Keep components small and separate your functionalities
 - Use JavaScript destructuring to remove redundancy.
 - Always prefer passing objects
