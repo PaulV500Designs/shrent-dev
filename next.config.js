@@ -15,9 +15,9 @@ module.exports = {
   },
 
   // Styled-components for next.js v12+
-  compiler: {
-    styledComponents: true,
-  },
+  // compiler: {
+  //   styledComponents: true,
+  // },
 
   // SVGR
   webpack(config) {

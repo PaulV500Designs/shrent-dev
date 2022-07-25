@@ -11,9 +11,11 @@ import Checkbox from '@/components/Elements/Checkbox';
 import FieldWrapper from '@/components/Elements/FieldWrapper';
 import Input from '@/components/Elements/Input';
 import Icon from '@/components/Icon';
-import EyeIcon from '@/components/Icon/svg/fi-eye.svg';
-import EyeCrossed from '@/components/Icon/svg/fi-eye-crossed.svg';
 import Layout from '@/components/Layout';
+
+
+const EyeIconUrl = '/svgs/icons/fi-eye.svg';
+const EyeCrossedUrl = '/svgs/icons/fi-eye-crossed.svg';
 
 import * as S from './page.style';
 
@@ -67,7 +69,7 @@ export default function LoginScreen() {
           </S.OR>
           <S.Form onSubmit={onSubmit}>
             <FieldWrapper>
-              <p>Username</p>
+              <span>Username</span>
               <Input
                 fullWidth
                 type='text'
@@ -75,12 +77,12 @@ export default function LoginScreen() {
               />
             </FieldWrapper>
             <FieldWrapper>
-              <p>Password</p>
+              <span>Password</span>
               <Input
                 fullWidth
                 type={showPass ? 'text' : 'password'}
                 icon={
-                  <Icon src={showPass ? EyeIcon : EyeCrossed} size='small' />
+                  <Icon src={showPass ? EyeIconUrl : EyeCrossedUrl} size='small' />
                 }
                 iconPosition='right'
                 iconColor='secondary'

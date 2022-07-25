@@ -11,12 +11,14 @@ import Checkbox from '@/components/Elements/Checkbox';
 import FieldWrapper from '@/components/Elements/FieldWrapper';
 import Input from '@/components/Elements/Input';
 import Icon from '@/components/Icon';
-import EyeIcon from '@/components/Icon/svg/fi-eye.svg';
-import EyeCrossed from '@/components/Icon/svg/fi-eye-crossed.svg';
 
 import * as LoginStyle from '@/pages/login/page.style';
 
 import * as S from './page.style';
+
+
+const EyeIconUrl = '/svgs/icons/fi-eye.svg';
+const EyeCrossedUrl = '/svgs/icons/fi-eye-crossed.svg';
 
 const shrentLogoUrl = '/images/shrent-logo-web.png';
 
@@ -95,7 +97,7 @@ export default function CreateAccountScreen() {
             <Input
               fullWidth
               type={showPass ? 'text' : 'password'}
-              icon={<Icon src={showPass ? EyeIcon : EyeCrossed} size='small' />}
+              icon={<Icon src={showPass ? EyeIconUrl : EyeCrossedUrl} size='small' />}
               iconPosition='right'
               iconColor='secondary'
               onIconClick={() => setShowPass((prev) => !prev)}
@@ -107,7 +109,7 @@ export default function CreateAccountScreen() {
             <Input
               fullWidth
               type={showPass ? 'text' : 'password'}
-              icon={<Icon src={showPass ? EyeIcon : EyeCrossed} size='small' />}
+              icon={<Icon src={showPass ? EyeIconUrl : EyeCrossedUrl} size='small' />}
               iconPosition='right'
               iconColor='secondary'
               onIconClick={() => setShowPass((prev) => !prev)}

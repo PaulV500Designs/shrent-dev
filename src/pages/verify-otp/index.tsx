@@ -9,7 +9,8 @@ import Cta from '@/components/Cta';
 import CtaContainer from '@/components/Cta/CtaContainer';
 import FieldWrapper from '@/components/Elements/FieldWrapper';
 import Icon from '@/components/Icon';
-import GreenCheck from '@/components/Icon/svg/fi-green-check.svg';
+
+const GreenCheckUrl = '/svgs/icons/fi-green-check.svg';
 
 // import OTPCode from '@/components/OTPCode';
 import * as S from './page.style';
@@ -28,7 +29,7 @@ export default function VerifyOTPScreen() {
 
   const VerifiedContent = () => (
     <>
-      <Icon src={GreenCheck} size='large' />
+      <Icon src={GreenCheckUrl} size='large' />
       <ContentHeader title='Your account has been verified successfully!' />
       <CtaContainer direction='column' margin='40px 0 0'>
         <Cta
