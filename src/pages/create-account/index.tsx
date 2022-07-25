@@ -34,9 +34,9 @@ export default function CreateAccountScreen() {
   };
 
   return (
-    <LoginStyle.PageContainer id='CreateAccountScreen'>
+    <LoginStyle.Page id='CreateAccountScreen'>
       <LoginStyle.LogoContainer className='logo-container'>
-        <Image src={shrentLogoUrl} alt='logo' layout='fill' />
+        <Image src={shrentLogoUrl} alt='logo' width={120} height={120} />
         <h2>Why buy it, Shrent it.</h2>
       </LoginStyle.LogoContainer>
       <Card withShadow>
@@ -64,9 +64,9 @@ export default function CreateAccountScreen() {
                         disabled={false}
                     /> */}
         </CtaContainer>
-        <LoginStyle.OR>
+        <LoginStyle.OtpRecovery>
           <caption>OR</caption>
-        </LoginStyle.OR>
+        </LoginStyle.OtpRecovery>
         <LoginStyle.Form onSubmit={onSubmit}>
           <FieldWrapper>
             <p>Username</p>
@@ -147,6 +147,6 @@ export default function CreateAccountScreen() {
           </S.HaveAccount>
         </LoginStyle.Form>
       </Card>
-    </LoginStyle.PageContainer>
+    </LoginStyle.Page>
   );
 }

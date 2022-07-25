@@ -79,13 +79,12 @@ export default function VerifyOTPScreen() {
   }, []);
 
   return (
-    <S.PageContainer id='verifyOTPScreen'>
+    <S.Page id='verifyOTPScreen'>
       <S.LogoContainer className='logo-container'>
-        {/* // eslint-disable-next-line react/jsx-no-undef */}
-        <Image src={shrentLogoUrl} alt='logo' layout='fill' />
+        <Image src={shrentLogoUrl} alt='logo' width={120} height={120} />
         <h2>Why buy it, Shrent it.</h2>
       </S.LogoContainer>
       <Card>{isVerified ? VerifiedContent() : VerifyOTPComponent()}</Card>
-    </S.PageContainer>
+    </S.Page>
   );
 }

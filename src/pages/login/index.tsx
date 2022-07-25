@@ -13,6 +13,7 @@ import Input from '@/components/Elements/Input';
 import Icon from '@/components/Icon';
 import Layout from '@/components/Layout';
 
+import GoogleLogo from '~/svgs/google-logo.svg';
 
 const EyeIconUrl = '/svgs/icons/fi-eye.svg';
 const EyeCrossedUrl = '/svgs/icons/fi-eye-crossed.svg';
@@ -34,9 +35,9 @@ export default function LoginScreen() {
 
   return (
     <Layout>
-      <S.PageContainer id='welcomeScreen'>
+      <S.Page id='welcomeScreen'>
         <S.LogoContainer className='logo-container'>
-          <Image src={shrentLogoUrl} alt='logo' width={100} height={100} />
+          <Image src={shrentLogoUrl} alt='logo' width={120} height={120} />
           <h2>Why buy it, Shrent it.</h2>
         </S.LogoContainer>
         <Card id='welcomeScreenCard' withShadow>
@@ -52,6 +53,7 @@ export default function LoginScreen() {
               size='large'
               onClick={() => { }}
             >
+              <GoogleLogo />
               Continue with Google
             </Cta>
             {/* <GoogleLogin
@@ -64,9 +66,9 @@ export default function LoginScreen() {
                         disabled={false}
                     /> */}
           </CtaContainer>
-          <S.OR>
+          <S.OtpRecovery>
             <caption>OR</caption>
-          </S.OR>
+          </S.OtpRecovery>
           <S.Form onSubmit={onSubmit}>
             <FieldWrapper>
               <span>Username</span>
@@ -128,7 +130,7 @@ export default function LoginScreen() {
             </S.HaveAccount>
           </S.Form>
         </Card>
-      </S.PageContainer>
+      </S.Page>
     </Layout>
   );
 }

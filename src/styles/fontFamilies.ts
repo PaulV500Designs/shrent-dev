@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
 
-const TitilliumWebRegularTtf = '~/fonts/TitilliumWeb-Regular.ttf';
-const TitilliumWebBoldTtf = '~/fonts/TitilliumWeb-Bold.ttf';
-const TitilliumWebSemiBoldTtf = '~/fonts/TitilliumWeb-SemiBold.ttf';
-const TitilliumWebLightTtf = '~/fonts/TitilliumWeb-Light.ttf.ttf';
+const TitilliumWebRegularTtf = '/fonts/TitilliumWeb-Regular.ttf';
+const TitilliumWebBoldTtf = '/fonts/TitilliumWeb-Bold.ttf';
+const TitilliumWebSemiBoldTtf = '/fonts/TitilliumWeb-SemiBold.ttf';
+const TitilliumWebLightTtf = '/fonts/TitilliumWeb-Light.ttf.ttf';
 
 const FontFamilies = css`
   @font-face {

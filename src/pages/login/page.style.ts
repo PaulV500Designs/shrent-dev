@@ -5,7 +5,7 @@ import { styleConstants } from '@/styles/styleConstants';
 
 const heroBannerBg = '/images/welcome-screen-web-bg-1.png';
 
-export const PageContainer = styled.section`
+export const Page = styled.section`
   background-image: url(${heroBannerBg}),
     linear-gradient(180deg, #dab9e6 12.19%, rgba(247, 210, 116, 0) 100%);
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@ export const PageContainer = styled.section`
 
 export const LogoContainer = styled.div``;
 
-export const OR = styled.div`
+export const OtpRecovery = styled.div`
   position: relative;
   margin: 20px 0;
 
@@ -104,4 +104,4 @@ export const HaveAccount = styled.div`
   }
 `;
 
-export default PageContainer;
+export default Page;
