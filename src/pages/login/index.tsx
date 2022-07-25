@@ -5,9 +5,7 @@ import React, { useState } from 'react';
 import 'twin.macro';
 
 import Card from '@/components/Card';
-import ContentHeader from '@/components/ContentHeader';
 import Cta from '@/components/Cta';
-import CtaContainer from '@/components/Cta/CtaContainer';
 import Checkbox from '@/components/Elements/Checkbox';
 import FieldWrapper from '@/components/Elements/FieldWrapper';
 import Input from '@/components/Elements/Input';
@@ -18,7 +16,7 @@ import GoogleLogo from '~/svgs/google-logo.svg';
 
 const EyeIconUrl = '/svgs/icons/fi-eye.svg';
 const EyeCrossedUrl = '/svgs/icons/fi-eye-crossed.svg';
-
+import 'twin.macro';
 
 import Button from '@/components/Button';
 
@@ -39,34 +37,32 @@ export default function LoginScreen() {
 
   return (
     <Layout>
-      <S.Page id='welcomeScreen'>
-        <S.LogoContainer className='logo-container'>
+      <S.Page>
+        <div className='logo-container'>
           <Image src={shrentLogoUrl} alt='logo' width={120} height={120} />
           <h2>Why buy it, Shrent it.</h2>
-        </S.LogoContainer>
-        <Card id='welcomeScreenCard' withShadow>
-          <ContentHeader
-            title='Log in to your account'
-            subTitle='Welcome back, please enter your details.'
-          />
-          <CtaContainer direction='column'>
-            <Button variant='outline'>
-              <GoogleLogo />
-              Continue with Google
-            </Button>
-            {/* <GoogleLogin
-                        className="cta cta-outline"
-                        clientId="38744847901-nqp81mfdsoroqppam0bceqs9ikmgfhsi.apps.googleusercontent.com"
-                        buttonText="Login"
-                        onSuccess={ssoCTA}
-                        onFailure={ssoCTA}
-                        cookiePolicy={'single_host_origin'}
-                        disabled={false}
-                    /> */}
-          </CtaContainer>
-          <S.OtpRecovery>
-            <caption>OR</caption>
-          </S.OtpRecovery>
+        </div>
+        <Card withShadow>
+          <header>
+            <h3>Login to your account</h3>
+            <p>Welcome back, please enter your details.</p>
+          </header>
+          <Button variant='outline' thin>
+            <GoogleLogo />
+            Continue with Google
+          </Button>
+          <span>OR</span>
+
+          {/* <GoogleLogin
+                  className="cta cta-outline"
+                  clientId="38744847901-nqp81mfdsoroqppam0bceqs9ikmgfhsi.apps.googleusercontent.com"
+                  buttonText="Login"
+                  onSuccess={ssoCTA}
+                  onFailure={ssoCTA}
+                  cookiePolicy={'single_host_origin'}
+                  disabled={false}
+              /> */}
+
           <S.Form onSubmit={onSubmit}>
             <FieldWrapper>
               <span>Username</span>

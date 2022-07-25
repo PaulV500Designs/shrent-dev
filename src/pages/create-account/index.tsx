@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 
+import Button from '@/components/Button';
 import Card from '@/components/Card';
-import ContentHeader from '@/components/ContentHeader';
 import Cta from '@/components/Cta';
 import CtaContainer from '@/components/Cta/CtaContainer';
 import Checkbox from '@/components/Elements/Checkbox';
@@ -40,20 +40,13 @@ export default function CreateAccountScreen() {
         <h2>Why buy it, Shrent it.</h2>
       </LoginStyle.LogoContainer>
       <Card withShadow>
-        <ContentHeader
-          title='Log in to your account'
-          subTitle='Welcome back, please enter your details.'
-        />
+        <h3>Login to your account</h3>
+        <h4>Welcome back, please enter your details.</h4>
+        <Button>
+          Continue with Google
+        </Button>
         <CtaContainer direction='column'>
-          <Cta
-            className='cta--google'
-            ctaStyle='outline'
-            ctaType='button'
-            size='large'
-            onClick={() => { }}
-          >
-            Continue with Google
-          </Cta>
+
           {/* <GoogleLogin
                         className="cta cta-outline"
                         clientId="38744847901-nqp81mfdsoroqppam0bceqs9ikmgfhsi.apps.googleusercontent.com"

@@ -5,6 +5,7 @@ import { DefaultTheme, ThemeProvider } from 'styled-components';
 import GlobalStyle from '@/styles/globalstyles';
 
 const theme: DefaultTheme = {
+  // NOTE: Set project style variables in tailwind.config and use them in globalStyles below is just for demo
   colors: {
     primary: '#111',
     secondary: '#0070f3',

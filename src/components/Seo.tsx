@@ -34,7 +34,7 @@ export default function Seo(props: SeoProps) {
 
   // Use siteName if there is templateTitle
   // but show full title if there is none
-  // !STARTERCONF Follow config for opengraph, by deploying one on https://github.com/theodorusclarence/og
+  // !STARTERCONF Follow config for opengraph,
   // ? Uncomment code below if you want to use default open graph
   // meta['image'] = openGraph({
   //   description: meta.description,
@@ -57,7 +57,7 @@ export default function Seo(props: SeoProps) {
       <meta name='image' property='og:image' content={meta.image} />
       {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:site' content='@th_clarence' />
+      <meta name='twitter:site' content='@500designsdev' />
       <meta name='twitter:title' content={meta.title} />
       <meta name='twitter:description' content={meta.description} />
       <meta name='twitter:image' content={meta.image} />
@@ -72,7 +72,7 @@ export default function Seo(props: SeoProps) {
           <meta
             name='author'
             property='article:author'
-            content='Theodorus Clarence'
+            content='500 Designs Dev'
           />
         </>
       )}

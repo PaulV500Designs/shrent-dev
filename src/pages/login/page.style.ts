@@ -30,8 +30,6 @@ export const Page = styled.section`
   }
 `;
 
-export const LogoContainer = styled.div``;
-
 export const OtpRecovery = styled.div`
   position: relative;
   margin: 20px 0;

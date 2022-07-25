@@ -28,6 +28,9 @@ module.exports = {
           DEFAULT: '#3704FF',
           darkest: '#022343'
         },
+        gray: {
+          DEFAULT: '#6E7387'
+        }
 
       },
       keyframes: {

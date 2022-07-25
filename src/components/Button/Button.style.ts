@@ -1,18 +1,14 @@
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-export const Button = styled.button`
+import { ButtonMods } from '@/components/Button';
+
+export const Button = styled.button<ButtonMods>`
   ${tw`flex flex-row items-center cursor-pointer
   gap-[20px] rounded-[8px] py-[16px] px-[20px] 
   w-full justify-center text-base
   `}
-  border: none;
-  margin: 0;
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  ${({ thin }) => thin && tw`py-[10px]`}
 `;
 
 export const DarkOutline = styled(Button)`

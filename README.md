@@ -1,7 +1,7 @@
 <div align="center">
-  <h1>ts-nextjs-tailwind-starter</h1>
-  <p>Next.js + Tailwind CSS + TypeScript starter packed with useful development features.</p>
-  <p>Project by <a href="#">Software Engineering Team</a></p>
+  <h1>ts-nextjs-tw-sc-starter</h1>
+  <p>Next.js + Tailwind CSS + TypeScript + Styled Component starter packed with useful development features.</p>
+  <p>by <a href="#">500 Designs Software Engineering Team</a></p>
 </div>
 
 ## Features
@@ -38,23 +38,43 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Stands / Patterns / Conventions
+## Standards / Patterns / Best Practices
 
-- Use functional components
-- Pratice KISS - avoid making unecessary logic and functions,
-  each project is custom and must match only Figma components,
-  if there are obvious reusable patterns, add them to our Company starter themes.
-- Practice DRY - but keep it simple
-- Use only inline tailwind styles only for quick layout i.e. tw='flex flex-col gap-5', the rest place in styled components
+- <b>KISS</b> - avoid making unecessary functions taken from other projects,
+  each project is custom and must match only its Figma components with pixel accuracy as much as possible.
+  If there are obvious reusable components (i.e buttons, forms), add them here to our company starter /kitchen-sink page. but remove them from a project if not used.
+- <b>DRY</b> - but keep it simple
+  - All reusable compoents at an atom, element, block (before section) level are are demoed in this template
+    /kitchen-sink
+  - Resuable intefaces and customHooks are stored in /types and /utils respectively
+  - For each new React project, get aquanted with components presented in the /kitchen-sink,
+    then add more or add variants to existing ones as needed based on project mockups/requirements
+- <b>Separation of concerns</b>:
+  - keep stylsheets / styled-components purely declarative of styles
+  - Put logic ie. coditionals, calculations, loops inside functions component or helper files.
+- <b>Styling:</b>
+
+  - Before coding pages, components on the project's Figma Style guide must be built first. and presented in /kitchen-sink for other dev's reference
+  - save font families and colors as variables in tailwind.config.js
+  - vanilla css can be used alongside tailwind syntax inside the styled component files
+  - use only inline tailwind styles only for quick layout i.e. tw='flex-col gap-5', the rest place in styled components, this keeps the least band-aids or overrides on our code
+  - Put CSS in JavaScript - through styled components
+  - /kitchen-sink page loads storybook (TBA)
+
+- <b>Typescript:</b>
+
+  - Provide explicit types for all values (esp. with props), avoid using 'any' as much as possible
+  - Take the previous state into account while updating the state i.e.
+  - Use TS-free TSX (JS free JSX) as much as possible - If logic is a one-liner, then using it in the TSX is fine
+
+- Use functional components and hooks, no class components and constructors as much as possible
+- store mockdata (pre API integration) in a separate file
 - Multiple component definition per file, is not allowed
 - Keep components small and separate your functionalities
 - Use JavaScript destructuring to remove redundancy.
 - Always prefer passing objects
 - Use short cirtuit operators for Conditional rendering
-- Always Set type/inteface for props
 - Use folder components
-- Put CSS in JavaScript - through styled components
-- Separate business logic from UI file, as much as possible.
 
 ### Naming Conventions
 
@@ -63,6 +83,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - CONSTANT_CASE - global constant values, including enum values
 - CSS-in-JS - follow [Airbnb Style Guide](https://github.com/airbnb/javascript/tree/master/css-in-javascript#naming)
 - Avoid using abbreviations in variables i.e. for "getTZ" use getTimeZone / getTimezone
+- for typescript interface or types declared inside components file add suffix "Props"
+  i.e. "type ButtonProps = {" or "interface ButtonProps {"
 
 ### Requirements before making PR / Merges
 

@@ -4,23 +4,14 @@ import tw from 'twin.macro';
 const Typography = css`
   html,
   body {
-    ${tw`font-primary font-normal`};
+    ${tw`font-body`}
   }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
   main {
     h1,
     h2,
     h3,
-    h4 {
+    h4,
+    h5 {
       ${tw`font-heading font-semibold`};
     }
     h1 {
@@ -28,6 +19,18 @@ const Typography = css`
     }
     h2 {
       font-size: 50px;
+    }
+    h3 {
+      font-size: 35px;
+    }
+    h4 {
+      font-size: 30px;
+    }
+    ol,
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
   }
 `;
