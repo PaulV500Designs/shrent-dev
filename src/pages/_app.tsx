@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import { useEffect, useState } from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '@/styles/globalstyles';
@@ -10,13 +11,24 @@ const theme: DefaultTheme = {
   },
 };
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
+export default function MyApp({ Component, pageProps }: AppProps) {
+  const [showChild, setShowChild] = useState(false);
+  useEffect(() => {
+    setShowChild(true);
+  }, []);
+
+  if (!showChild) {
+    return null;
+  }
+
+  if (typeof window === 'undefined') {
+    return <></>;
+  } else {
+    return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
-    </>
-  );
+    );
+  }
 }
