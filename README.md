@@ -41,8 +41,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Stands / Patterns / Conventions
 
 - Use functional components
+- Prevent multiple component definition per file
 - Keep components small and separate your functionalities
-- Always name your React components accordingly.
 - Use JavaScript destructuring to remove redundancy.
 - Always prefer passing objects
 - Use short cirtuit operators for Conditional rendering
@@ -53,8 +53,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Naming Conventions
 
-- Components: Pascal Case for Both File and Component Name
-- Utility functions: Camel Case
+- UpperCamelCase - component / interface / type / enum / decorator / type parameters
+- lowerCamelCase - variable / parameter / function / method / property / module alias
+- CONSTANT_CASE - global constant values, including enum values
+- CSS-in-JS - follow [Airbnb Style Guide](https://github.com/airbnb/javascript/tree/master/css-in-javascript#naming)
 
 ### Requirements before making PR / Merges
 

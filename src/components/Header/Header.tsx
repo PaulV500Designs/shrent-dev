@@ -4,22 +4,22 @@ import * as React from 'react';
 import * as S from './Header.style';
 
 const links = [
-  { href: '/', label: 'Route 1' },
-  { href: '/', label: 'Route 2' },
+  { href: '/home', label: 'home' },
+  { href: '/login', label: 'login' },
 ];
 
 export default function Header() {
   return (
     <S.Header>
-      <div className='layout flex h-14 items-center justify-between'>
-        <Link href='/' className='font-bold hover:text-gray-600'>
+      <div>
+        <Link href='/' className='home-link'>
           Home
         </Link>
         <nav>
-          <ul className='flex items-center justify-between space-x-4'>
+          <ul>
             {links.map(({ href, label }) => (
               <li key={`${href}${label}`}>
-                <Link href={href} className='hover:text-gray-600'>
+                <Link href={href}>
                   {label}
                 </Link>
               </li>
