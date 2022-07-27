@@ -35,10 +35,10 @@ export default function CreateAccountScreen() {
 
   return (
     <LoginStyle.Page id='CreateAccountScreen'>
-      <LoginStyle.LogoContainer className='logo-container'>
+      <div className='logo-container'>
         <Image src={shrentLogoUrl} alt='logo' width={120} height={120} />
         <h2>Why buy it, Shrent it.</h2>
-      </LoginStyle.LogoContainer>
+      </div>
       <Card withShadow>
         <h3>Login to your account</h3>
         <h4>Welcome back, please enter your details.</h4>

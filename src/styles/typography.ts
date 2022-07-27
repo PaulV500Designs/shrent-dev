@@ -2,10 +2,6 @@ import { css } from 'styled-components';
 import tw from 'twin.macro';
 
 const Typography = css`
-  html,
-  body {
-    ${tw`font-body`}
-  }
   main {
     h1,
     h2,

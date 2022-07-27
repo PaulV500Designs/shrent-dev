@@ -1,11 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 import FontFamilies from '@/styles/fontFamilies';
-import PreFlight from '@/styles/preFlight';
 import Typography from '@/styles/typography';
 
-const GlobalStyle = createGlobalStyle`
-  ${PreFlight}
+const AppStyles = createGlobalStyle`
   ${FontFamilies}
   ${Typography}
 
@@ -15,4 +13,4 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default GlobalStyle;
+export default AppStyles;

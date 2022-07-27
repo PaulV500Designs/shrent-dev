@@ -1,8 +1,10 @@
 import type { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
+import { GlobalStyles } from 'twin.macro'; // new
 
-import GlobalStyle from '@/styles/globalstyles';
+import AppStyles from '@/styles/globalstyles';
+
 
 const theme: DefaultTheme = {
   // NOTE: Set project style variables in tailwind.config and use them in globalStyles below is just for demo
@@ -23,11 +25,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }
 
   if (typeof window === 'undefined') {
-    return <></>;
+    return <>Not in browser...</>;
   } else {
     return (
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
+        <GlobalStyles />
+        <AppStyles />
         <Component {...pageProps} />
       </ThemeProvider>
     );

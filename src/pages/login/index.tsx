@@ -22,6 +22,7 @@ import Button from '@/components/Button';
 
 import * as S from './page.style';
 
+
 const shrentLogoUrl = '/images/shrent-logo-web.png';
 
 export default function LoginScreen() {
